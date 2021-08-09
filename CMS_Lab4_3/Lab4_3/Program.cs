@@ -72,7 +72,7 @@ namespace Lab4_3
         {
             foreach (Customer cust in customers)
             {
-                if (cust.GetCompany() == company)
+                if (cust.GetCompany().ToLower() == company.ToLower())
                 {
                     return cust;
                 }
@@ -117,8 +117,7 @@ namespace Lab4_3
             Console.Write("\nEnter company name: ");
             string coName = Console.ReadLine();
 
-            Console.Write("\nEnter phone: ");
-            string coPhone = Console.ReadLine();
+           
 
             myCustomer = SearchCompanyByName(customersList, coName);
 
@@ -132,17 +131,7 @@ namespace Lab4_3
                 Console.WriteLine("Company not found!");
             }
 
-            myCustomer = SearchCompanyByPhone(customersList, coPhone);
-
-            if (myCustomer != null)
-            {
-                Console.WriteLine("\nCompany details:");
-                Console.WriteLine(myCustomer);
-            }
-            else
-            {
-                Console.WriteLine("Company not found!");
-            }
+            
 
 
         }
