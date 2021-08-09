@@ -81,17 +81,6 @@ namespace Lab4_3
         }
         
 
-        static Customer SearchCompanyByPhone(List<Customer> customers, string phone)
-        {
-            foreach (Customer cust in customers)
-            {
-                if (cust.GetPhone() == phone)
-                {
-                    return cust;
-                }
-            }
-            return null;
-        }
 
         static void Main(string[] args)
         {
